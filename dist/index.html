@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Paper.js intersact</title>
+</head>
+<style>* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    padding: 60px;
+  }
+
+  .wrapper {
+    display: flex;
+    height: calc(100vh - 120px);
+    max-height: 740px;
+    background-color: #fff;
+    max-width: 1150px;
+    margin: auto;
+    border: 1px solid;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .left {
+    flex: 1 0 auto;
+    width: 70%;
+    height: 100%;
+  }
+
+  canvas {
+    height: 100%;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  canvas[resize] {
+    width: 100%;
+    height: 100%;
+  }
+
+  .right {
+    width: 60vh;
+    flex: 1 0 60vh;
+    overflow: hidden;
+  }
+
+  .right img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: auto;
+    max-height: 100%;
+    width: calc(100% + 100px);
+    position: relative;
+    z-index: 10;
+    margin-left: -40px;
+    opacity: 0;
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 100;
+    transform: translate3d(0, 0, 0);
+  }</style>
+
+<body>
+  <div class="wrapper">
+    <div class="left">
+      <canvas id="myCanvas" resize=""></canvas>
+    </div>
+    <div class="right">
+      <img src="https://images.pexels.com/photos/1164674/pexels-photo-1164674.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="model" id="img">
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </div>
+  <script id="myCanvas" resize="" src="/app.c328ef1a.js"></script>
+</body>
+
+</html>
